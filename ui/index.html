@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multi-Camera YOLO Dashboard</title>
+
+<style>
+body {
+  background:#0b1020;
+  color:#e5e7eb;
+  font-family: monospace;
+  margin:20px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+}
+
+.card {
+  border:2px solid #00ff99;
+  padding:10px;
+}
+
+img {
+  width:100%;
+  border:1px solid #00ff99;
+}
+
+pre {
+  background:#020617;
+  padding:10px;
+  max-height:220px;
+  overflow:auto;
+  font-size:12px;
+}
+h2 { color:#00ff99; }
+</style>
+</head>
+
+<body>
+
+<h1>🚀 Multi-Camera YOLO Live</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>Camera 1</h2>
+    <img src="http://localhost:8002/video/1">
+    <h3>Detections</h3>
+    <pre id="cam1">Waiting…</pre>
+  </div>
+
+  <div class="card">
+    <h2>Camera 2</h2>
+    <img src="http://localhost:8002/video/2">
+    <h3>Detections</h3>
+    <pre id="cam2">Waiting…</pre>
+  </div>
+
+</div>
+
+<script>
+function connectWS(camId, elementId) {
+  const ws = new WebSocket(`ws://localhost:8002/ws/detections/${camId}`);
+
+  ws.onopen = () => {
+    document.getElementById(elementId).innerText = "Connected";
+  };
+
+  ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+
+    let text = "Latest:\n";
+    data.latest.forEach(d => {
+      text += `• ${d.class} (${(d.confidence*100).toFixed(1)}%)\n`;
+    });
+
+    text += "\nHistory:\n";
+    data.history.slice(-10).forEach(d => {
+      text += `• ${d.class} (${(d.confidence*100).toFixed(1)}%)\n`;
+    });
+
+    document.getElementById(elementId).innerText = text;
+  };
+
+  ws.onerror = () => {
+    document.getElementById(elementId).innerText = "WebSocket error";
+  };
+}
+
+connectWS(1, "cam1");
+connectWS(2, "cam2");
+</script>
+
+</body>
+</html>

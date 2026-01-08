@@ -1,0 +1,6 @@
+[console_scripts]
+camera1 = camera_publisher.camera1:main
+camera2 = camera_publisher.camera2:main
+gstreamer = camera_publisher.gstream:main
+yolo = camera_publisher.yolo:main
+

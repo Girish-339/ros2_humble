@@ -1,0 +1,24 @@
+[1.386s] Invoking command in '/home/girish/ros2_multi_camera_ws/src/camera_publisher': PYTHONPATH=/home/girish/ros2_multi_camera_ws/build/camera_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera_publisher build --build-base /home/girish/ros2_multi_camera_ws/build/camera_publisher/build install --record /home/girish/ros2_multi_camera_ws/build/camera_publisher/install.log --single-version-externally-managed install_data
+[1.978s] running egg_info
+[1.980s] writing ../../build/camera_publisher/camera_publisher.egg-info/PKG-INFO
+[1.981s] writing dependency_links to ../../build/camera_publisher/camera_publisher.egg-info/dependency_links.txt
+[1.981s] writing entry points to ../../build/camera_publisher/camera_publisher.egg-info/entry_points.txt
+[1.981s] writing requirements to ../../build/camera_publisher/camera_publisher.egg-info/requires.txt
+[1.982s] writing top-level names to ../../build/camera_publisher/camera_publisher.egg-info/top_level.txt
+[1.986s] reading manifest file '../../build/camera_publisher/camera_publisher.egg-info/SOURCES.txt'
+[1.989s] writing manifest file '../../build/camera_publisher/camera_publisher.egg-info/SOURCES.txt'
+[1.989s] running build
+[1.989s] running build_py
+[1.990s] running install
+[1.990s] running install_lib
+[1.994s] running install_data
+[1.994s] running install_egg_info
+[1.998s] removing '/home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/python3.10/site-packages/camera_publisher-0.0.0-py3.10.egg-info' (and everything under it)
+[1.998s] Copying ../../build/camera_publisher/camera_publisher.egg-info to /home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/python3.10/site-packages/camera_publisher-0.0.0-py3.10.egg-info
+[2.006s] running install_scripts
+[2.046s] Installing camera1 script to /home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/camera_publisher
+[2.047s] Installing camera2 script to /home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/camera_publisher
+[2.047s] Installing gstreamer script to /home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/camera_publisher
+[2.047s] Installing yolo script to /home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/camera_publisher
+[2.048s] writing list of installed files to '/home/girish/ros2_multi_camera_ws/build/camera_publisher/install.log'
+[2.095s] Invoked command in '/home/girish/ros2_multi_camera_ws/src/camera_publisher' returned '0': PYTHONPATH=/home/girish/ros2_multi_camera_ws/build/camera_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/girish/ros2_multi_camera_ws/install/camera_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera_publisher build --build-base /home/girish/ros2_multi_camera_ws/build/camera_publisher/build install --record /home/girish/ros2_multi_camera_ws/build/camera_publisher/install.log --single-version-externally-managed install_data
